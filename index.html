@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect 4 Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-panel" aria-labelledby="game-title">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Halfway build</p>
+            <h1 id="game-title">Connect 4</h1>
+          </div>
+          <div class="turn-card" aria-live="polite">
+            <span class="turn-label">Turn</span>
+            <span id="current-player" class="player-chip red">Red</span>
+          </div>
+        </header>
+
+        <div class="status-row">
+          <p id="status-message">Drop a disc. Horizontal four-in-a-row wins are detected.</p>
+        </div>
+
+        <div class="board-wrap">
+          <div id="column-controls" class="column-controls" aria-label="Drop disc controls"></div>
+          <div id="board" class="board" aria-label="Connect 4 board"></div>
+        </div>
+      </section>
+
+      <aside class="side-panel" aria-label="Build status">
+        <div class="scoreboard">
+          <h2>Score</h2>
+          <div class="score-grid">
+            <div>
+              <span class="score-label">Red</span>
+              <strong id="red-score">0</strong>
+            </div>
+            <div>
+              <span class="score-label">Yellow</span>
+              <strong id="yellow-score">0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="notes">
+          <h2>Done</h2>
+          <ul>
+            <li>Playable board UI</li>
+            <li>Disc drop logic</li>
+            <li>Horizontal four-in-a-row detection</li>
+          </ul>
+        </div>
+
+        <div class="notes unfinished">
+          <h2>Still Unfinished</h2>
+          <ul>
+            <li>Vertical four-in-a-row detection</li>
+            <li>Game-over flow and new game button</li>
+            <li>Best-of-5 series handling</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
